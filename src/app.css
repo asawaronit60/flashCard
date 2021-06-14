@@ -1,0 +1,97 @@
+body{
+    background-color: #c8D0D2;
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background-color: white;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+   
+}
+
+
+.form-group{
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group > label{
+    font-size: .75rem;
+    margin-bottom: .25rem;
+}
+
+.btn{
+    background-color: royalblue;
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+    top: 4px;
+    position: relative;
+}
+
+.container{
+    max-width: 900px;
+    margin: 1rem 2rem;
+}
+
+.card-grid{
+  display: grid;
+ align-items: center;
+ grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+ gap: 1rem;
+}
+
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-radius: .25rem;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+    transform-style: preserve-3d;
+    transition: 150ms;
+    cursor: pointer;
+    transform:  rotateY(var(--rotate-y,0)) ;
+}
+
+.card:hover{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.5);
+
+}
+
+.card.flip{
+    --rotate-y:180deg;
+}
+
+.card .front{
+    left: 0;
+}
+
+.card .front , .card .back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .back{
+    transform: rotateY(180deg);
+}
+
+.flashcard-options{
+   margin-top: 1 rem;
+}
+
+.flashcard-option{
+   margin-top: .75rem;
+} 
